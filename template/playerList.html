@@ -1,0 +1,67 @@
+<!--
+* FileName:playerList.html
+* CreatedBy: Habeeb
+* Date :07-08-2016
+* Purpose : UI for displaying player information
+-->
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+        <marquee behavior="scroll" direction="left" scrollamount="5"> <span style="color:black;font-weight:bold"><h5>welcome {{teamName}}</h5></span></marquee>
+        </div>
+    </nav>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<center>
+<table>
+  <tbody>
+  <tr>
+    <td>
+    <li><span style="color:black;font-weight:bold">team Name</span>    :<span style="color:blue;font-weight:bold">{{data1.team_name}}</span></li>
+    <li><span style="color:black;font-weight:bold">team Captain</span> :<span style="color:red;font-weight:bold"> {{data1.team_captain}}</span></li>
+    <li><span style="color:black;font-weight:bold">team Coach          :{{data1.team_coach}}</span></li>
+    <li><span style="color:black;font-weight:bold">team Home Venue     :{{data1.team_home_venue}}</span></li>
+    <li><span style="color:black;font-weight:bold">team Owner          :{{data1.team_owner}}</span></li>
+    </td>
+    <td>
+        <img src= "DD.jpg"id="{{data1.team_img_url}}" name={{getImage(data1.team_img_url)}} style="width:240px;height:150px" ></img>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<center>
+  <img src= "DD.jpg"id="{{data1.team_background}}" name={{getImage(data1.team_background)}} style="width:1500px;height:150px" ></img>
+</center>
+                </div>
+                <br>
+    <div class="container">
+        <div class="row">
+                <div ng-repeat="x in data" class="col-md-4">
+                    <div class="w3-card-8 w3-dark-grey" style="width:228% height:284%">
+                      <center>
+                         <!--header for displaying player Name-->
+                        <header class="w3-container w3-red">
+                        <h5><span style="color:blue;font-weight:bold"> {{x.player_name}}</span></h5>
+                      </header>
+                        <img src="DelhiDareDevils/amit_mishra.png" id={{x.player_img_url}} name={{getImage(x.player_img_url)}} style="width:169px height:210px"></img>
+                        <div class="w3-section">
+                           <!--Footer for displaying player info-->
+                          <footer class="w3-container w3-blue">
+                          <table>
+                              <tr><td >BattingStyle</td> <td> :</td><td> {{x.player_batting_style}}</td></tr>
+                              <tr><td>BowlingStyle </td> <td> :</td><td> {{x.player_bowling_style}}</td></tr>
+                              <tr><td>DateOfBirth  </td> <td> :</td><td> {{x.player_dob}}</td></tr>
+                              <tr><td>Nationality  </td> <td> :</td><td> {{x.player_nationality}}</td></tr>
+                              <tr><td>Role          </td> <td> :</td><td>{{x.player_role}}</td></tr>
+                          </table>
+                        </footer>
+                        </center>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+</div>

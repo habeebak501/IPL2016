@@ -1,0 +1,27 @@
+<!--
+* FileName:teamDetails.html
+* CreatedBy: Habeeb
+* Date :07-08-2016
+* Purpose : UI for displaying Pirticular Team information
+-->
+<table>
+    <tr>
+        <th> IPL 2016 TEAM DETAILS</th>
+        <th>TEAM LOGO</th>
+    </tr>
+    <tbody>
+          <tr ng-repeat="data in data">
+            <td>
+                <li>team_name: {{data.team_name}}</li>
+                <li>team_captain: {{data.team_captain}}</li>
+                <li>team_coach: {{data.team_coach}}</li>
+                <li>team_home_venue:{{data.team_home_venue}}</li>
+                <li>team_owner: {{data.team_owner}}</li>
+                <br>
+            </td>
+            <td>
+              <img src= "DD.jpg"id="{{data.team_img_url}}" name={{getImage(data.team_img_url)}} style="width:240px;height:100px" ></img>
+            </td>
+        </tr>
+    </tbody>
+</table>

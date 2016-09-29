@@ -1,0 +1,28 @@
+<!--
+* FileName:teamInfo.html
+* CreatedBy: Habeeb
+* Date :07-08-2016
+* Purpose : UI for displaying All teams information
+-->
+  <center>
+  <table>
+      <tbody>
+          <tr ng-repeat="x in data">
+              <td>
+                   <br>
+                  <li><span style="color:black;font-weight:bold">team Name:</span><span style="color:blue;font-weight:bold">{{x.team_name}}</span></li>
+                  <li><span style="color:black;font-weight:bold">team Captain:</span><span style="color:red;font-weight:bold"> {{x.team_captain}}</span></li>
+                  <li><span style="color:black;font-weight:bold">team Coach: {{x.team_coach}}</span></li>
+                  <li><span style="color:black;font-weight:bold">team Home Venue:{{x.team_home_venue}}</span></li>
+                  <li><span style="color:black;font-weight:bold">team Owner: {{x.team_owner}}</span></li>
+                  <br>
+              </td>
+              <td>
+                <a ui-sref="playerList({teamname:x.team_name})" class="thumbnail">
+                  <img src= "DD.jpg"id="{{x.team_img_url}}" name={{getImage(x.team_img_url)}} style="width:240px;height:100px" ></img></a>
+                  <br>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  </center>

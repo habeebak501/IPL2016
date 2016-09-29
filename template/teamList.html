@@ -1,0 +1,17 @@
+<!--
+* FileName:teamList.html
+* CreatedBy: Habeeb
+* Date :07-08-2016
+* Purpose : UI for displaying Teams Name and Logos
+-->
+<body background="Wankhede-Stadium1.jpg">
+  <div class="container">
+        <div class="row">
+            <div ng-repeat="x in data" class="col-md-3">
+            <a ui-sref="playerList({teamname:x.team_name})" class="thumbnail"><p>{{x.team_name}}</p>
+            <img  id="{{x.team_img_url}}" name="{{getImage(x.team_img_url)}}" alt="Ipl" width="320px" height="130px">
+            </a>
+                </div>
+            </div>
+        </div>
+</body>

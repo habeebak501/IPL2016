@@ -1,0 +1,72 @@
+<!--
+* FileName:index.html
+* CreatedBy: Habeeb
+* Date :07-08-2016
+* Purpose : main page for routing
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+    <script src="app.js"></script>
+    <
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Starting/Creating of Angular Application -->
+<body ng-app="myApp">
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-dark bg-primary">
+          <div class="navbar-header">
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a ui-sref="teamList"><font size="2" color="black"><span class="glyphicon glyphicon-home"></span>Home</font></a></li>
+              <li><a ui-sref="teamInfo"><font size="2" color="black"><span class="glyphicon glyphicon-file"></span>Teams </font></a></li>
+              <li><a href="http://www.iplt20.com/about/contact/3"><font size="2" color="black"><span class="glyphicon glyphicon-earphone"></span>Contact Us</font></a></li>
+          </ul>
+  </nav>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+          <div class="navbar-header">
+          </div>
+            <center>
+            <h1> Indian Premier League</h1>
+          </center>
+      </div>
+  </nav>
+    <div>
+      <!-- Ui view will be added here -->
+        <ui-view></ui-view>
+    </div>
+</body>
+<!-- Required Controller and Services -->
+<script src="controller/playerListCtrl.js"></script>
+<script src="controller/teamListCtrl.js"></script>
+<script src="controller/teamInfoCtrl.js"></script>
+<script src="controller/teamDetailsCtrl.js"></script>
+<script src="services/iplService.js"></script>
+ <script src="services/imageService.js"></script>
+</div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDhbt2ecSH73adFNEucJbcJKUssawQw9s8",
+        authDomain: "ipl2016-173ae.firebaseapp.com",
+        databaseURL: "https://ipl2016-173ae.firebaseio.com",
+        storageBucket: "ipl2016-173ae.appspot.com",
+    };
+    firebase.initializeApp(config);
+</script>
+
+</html>
